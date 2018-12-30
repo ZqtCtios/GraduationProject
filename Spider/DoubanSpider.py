@@ -66,7 +66,7 @@ class Spider:
 
     def work(self):
         self.cursor.execute(
-            "select id,bookId from bookIdForSpider where hasdone=0 where id >10000")
+            "select id,bookId from bookIdForSpider where hasdone=0 and id >10000")
         data = self.cursor.fetchall()
         count = 0
         for line in data:
